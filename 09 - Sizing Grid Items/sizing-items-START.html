@@ -7,17 +7,65 @@
   <link rel="stylesheet" href="../assets/style.css">
   <title>Sizing Grid Items!</title>
 </head>
-
+ 
 <body>
   <div class="container">
-
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item5">5</div>
+    <div class="item item6">6</div>
+    <div class="item item7">7</div>
+    <div class="item item8">8</div>
+    <div class="item item9">Estaesunacolumnaconuntextomuylargo</div>
+    <div class="item item10">10</div>
+    <div class="item item11">11</div>
+    <div class="item item12">12</div>
+    <div class="item item13">13</div>
+    <div class="item item14">14</div>
+    <div class="item item15">15</div>
+    <div class="item item16">16</div>
+    <div class="item item17">17</div>
+    <div class="item item18">18</div>
+    <div class="item item19">19</div>
+    <div class="item item20">20</div>
+    <div class="item item21">21</div>
+    <div class="item item22">22</div>
+    <div class="item item23">23</div>
+    <div class="item item24">24</div>
+    <div class="item item25">25</div>
+    <div class="item item26">26</div>
+    <div class="item item27">27</div>
+    <div class="item item28">28</div>
+    <div class="item item29">29</div>
+    <div class="item item30">30</div>
   </div>
 
   <style>
     .container {
       display: grid;
       grid-gap: 20px;
+      grid-template-columns: repeat(5, 1fr);
     }
+    /* EJEMPLO 1
+    .item9{
+      background: mistyrose;
+      width:500px;
+    } */
+    /* EJEMPLO 2: Sin especificar un ancho y con un texto muy largo, la columna se adapta al ancho de lo que contiene
+    .item9{
+      background: mistyrose;
+    } */
+    /* EJEMPLO 3: Si usamos un "column span" que ocupe mas columnas de las que naturalemtne caben dentro del grid, el estilo busca el espacio libre donde la pueda ubicar
+    .item9{
+      background: mistyrose;
+      grid-column: span 3;*/
+     /* EJEMPLO 4: Si hacemos el span mas gande que la capacidad del grid, el grid busca entonces ubicar los demas elementos en base a la nueva caracteristica con el ancho maximo*/
+      .item9{
+      background: mistyrose;
+      grid-column: span 10;
+      grid-row: span 2;}
   </style>
 </body>
 

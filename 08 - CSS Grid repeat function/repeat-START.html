@@ -31,6 +31,14 @@
     .container {
       display: grid;
       grid-gap: 20px;
+      /* Ejemplo 1: crea el grid asignandole tantas veces lo que esta despues de la coma
+      grid-template-columns: repeat(4, 1fr);
+      */
+      /* Ejemplo 2: Usando 2 anchuras diferentes
+      grid-template-columns: repeat(4, 1fr 2fr);
+      */
+      /* EJEMPLO 3: Uso mixto de repeats y metodo tradicional usando diferentes tipos de medidas */
+      grid-template-columns: 150px repeat(2, 2fr auto) repeat(2, 1fr 2fr) auto;
     }
   </style>
 </body>

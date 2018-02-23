@@ -18,7 +18,7 @@
     <div class="item item6">6</div>
     <div class="item item7">7</div>
     <div class="item item8">8</div>
-    <div class="item item8">💩</div>
+    <div class="item poop">💩</div>
     <div class="item item9">9</div>
     <div class="item item10">10</div>
     <div class="item item11">11</div>
@@ -48,6 +48,24 @@
       display: grid;
       grid-gap: 20px;
       grid-template-columns: repeat(5, 1fr);
+    }
+    /*
+    .poop{
+      grid-column: span 2;
+      background: #BADA55
+    } */
+    .poop{
+      /* ESCRIBIR ESTO:
+      grid-column-start: 2;
+      grid-column-end: 5; */
+      /* ES LO MISMO QUE ESCRIBIR ESTE SHORTHAND: 
+      grid-column: 2/5; */
+      /* SE PUEDE MEZCLAR DICIENDO POR EJEMPLO EL INICIO O FINAL DE UN TRACK Y MEZCLANDOLO CON UN SPAN 
+      grid-column: 2 / span 2;*/
+      /* SI NO SE CUANTOS ITEMS PUEDA LLEGAR A TENER EN LAS COLUMNAS DE UN GRID, PUEDO USAR "-1" PARA INDICAR QUE OCUPE HASTA EL ULTIMO ITEM, SI ESCRIBO -2 INDICA QUE LLEGARA HASTE EL PENULTIMO ITEM... */
+      grid-column: 2 / -1;
+      grid-row: 2 /5;
+      background: #BADA55
     }
   </style>
 </body>
